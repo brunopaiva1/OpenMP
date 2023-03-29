@@ -1,22 +1,11 @@
-/* File:     omp_hello.c
- *
- * Purpose:  A parallel hello, world program that uses OpenMP
- *
- * Compile:  gcc -g -Wall -fopenmp -o omp_hello omp_hello.c
- * Run:      ./omp_hello <number of threads>
- * 
- * Input:    none
- * Output:   A message from each thread
- *
- * IPP:      Section 5.1 (pp. 211 and ff.)
- */
+// Paralelização de código Hello World! usando a API OpenMP
 #include <stdio.h>
 #include <stdlib.h>
 #ifdef _OPENMP
 #   include <omp.h>
 #endif   
 
-void Hello(void);  /* Thread function */
+void Hello(void);  /* Função Thread */
 
 /*--------------------------------------------------------------------*/
 int main(int argc, char* argv[]) {
